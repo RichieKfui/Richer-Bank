@@ -162,13 +162,13 @@ p {
 }
 #mainNavbar {
   background-color: rgba(0,0,0,0.5);
-  height: 140px;
+  height: 100px;
   transition: .5s all;
 }
 .colored {
   background-color: rgba(241,96,1,1) !important;
   box-shadow: 0 0 10px rgba(0,0,0,0.8);
-  height: 120px !important;
+  height: 70px !important;
 }
 /* mega dropdown */
 .mega-dropdown-container {
@@ -354,7 +354,8 @@ p {
   font-size: 60px;
   color:  #f16001;
 }
-.serv-container a {
+.serv-container a,
+.btn-2 {
   color: #f16001;
   background: #f5f5f5;
   align-self: center;
@@ -363,7 +364,8 @@ p {
   border-radius: 5px;
   text-decoration: none;
 }
-.serv-container a:hover {
+.serv-container a:hover,
+.btn-2:hover {
   background: #ff6600;
   color: #fff;
   box-shadow: 0 0 5px rgba(0,0,0,0.7);
@@ -373,17 +375,67 @@ p {
   height: 100%;
 }
 
-/*======================
-    NEWS MORE STYLES
-======================*/
+/*=============================
+    NEWS MORE,LEFT SIDE STYLES
+==============================*/
+.breadcrumb-nav .breadcrumb {
+  margin: 7px 0;
+  background: inherit;
+}
+.breadcrumb-nav .breadcrumb a {
+  color: #333;
+}
+.breadcrumb-nav .breadcrumb li:last-child {
+  color: #f16001;
+}
 #newsMore {
-  padding: 50px 0;
+  padding: 50px;
+}
+#pageContent {
+  padding: 0 0 50px 0;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   background: #fff;
   color: #f16001;
   border-radius: 0;
   border-bottom: 2px solid #f16001;
+}
+#leftContent {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+}
+.left-container {
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.left-container .label {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: rgba(0,0,0,0.7);
+  background-image: url("../img/personal-banking.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+.left-container .label .title {
+  text-align: left;
+  align-self: center;
+}
+.left-container .label .title span {
+  border-left: 5px solid #fff;
+  padding-left: 15px;
+}
+.left-container .left-content h3,
+.left-container .left-content h5 {
+  margin-top: 40px;
 }
 .nav-pills .nav-link {
   color: #777;
@@ -397,14 +449,15 @@ p {
 .tab-news {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   margin: 7px 0;
   background: linear-gradient(to left, rgba(241,96,1,.1), #fff);
 }
-#tabContent .t-title {
+#tabContent .t-title,
+#newsContent .t-title,
+#leftContent .t-title {
   font-size: 22px;
   font-weight: 600;
-  margin: 20px 0 20px 8px;
+  margin: 20px 8px;
 }
 .t-meta {
   width: 8%;
@@ -433,6 +486,9 @@ p {
   font-size: 18px;
   color: rgba(241,96,1,.9);
 }
+.tab-info p {
+  margin: 0;
+}
 .tab-info a {
   color: rgba(241,96,1,.6);
   position: relative;
@@ -449,11 +505,39 @@ p {
   font-size: 10px;
 }
 
-.adverts {
+.adverts,
+.right-side {
+  width: 100%;
+  min-height: auto;
+}
+.quick-links, .advert-box {
+  box-shadow: -1px -1px .3px rgba(0,0,0,0.5);
+  padding-left: 2px;
+  border-top-left-radius: .25em;
   width: 100%;
   height: 100%;
-  box-shadow: -1px -1px .2px rgba(0,0,0,0.3);
-  padding-left: 2px;
+}
+.quick-links h3 {
+  margin: 10px 0 30px 0;
+}
+.quick-links h3 span {
+  border-bottom: 2px solid #f16001;
+  padding-bottom: 8px;
+}
+.quick-links li a {
+  position: relative;
+  color: #333;
+  display: block;
+  padding: 5px;
+  transition: .5s all;
+  border-bottom: 1px dashed #ccc;
+}
+
+.quick-links li a:hover {
+  color: #f16001;
+}
+.quick-links {
+  padding: 15px 20px;
 }
 .img-ads {
   display: flex;
@@ -482,10 +566,11 @@ p {
 .bottom li a {
   position: relative;
   padding: 5px;
-  display: block;
+  display: inline-block;
   transition: .5s all;
 }
-.bottom li a::before {
+.bottom li a::before,
+.quick-links li a::before {
   font-family: FontAwesome;
   position: absolute;
   content: "\f061";
@@ -494,7 +579,8 @@ p {
   font-size: 10px;
   display: none;
 }
-.bottom li:hover a::before {
+.bottom li:hover a::before,
+.quick-links li:hover a::before {
   display: block;
 }
 
@@ -531,7 +617,7 @@ p {
 }
 .btn-back-to-top {
     position: fixed;
-    bottom: 45px;
+    bottom: 90px;
     right: 20px;
     font-size: 22px;
     padding: 11px 20px;
